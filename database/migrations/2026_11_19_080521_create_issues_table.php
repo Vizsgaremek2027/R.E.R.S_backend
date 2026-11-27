@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string("title", 100);
             $table->string("description", 10);
             $table->string("category", 30);
-            $table->string("image_path", 255);
-            $table->string("status", 30);
-            $table->timestamp('archived_at')->useCurrent();
+            $table->string("image_path", 255)->nullable();
+            $table->string("status", 30)->default("Pending");
+            $table->timestamp('archived_at')->nullable();
         });
     }
 

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId("apartment_id");
             $table->enum("utility_type", ["Water", "Gas", "Electricity"]);
             $table->decimal("reading_value", 10, 2);
-            $table->string("photo_path", 255);
+            $table->string("photo_path", 255)->nullable();
             $table->date("reading_date");
             $table->timestamps();
         });
